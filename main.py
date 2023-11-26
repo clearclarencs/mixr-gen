@@ -17,7 +17,12 @@ def gen(use_card=False, card=""):
         with open("cards.csv", "w") as w:
             w.write("\n".join(cards))
         print(card)
-        cc_num, cc_exp_mon, cc_exp_yr = card.split(",")
+        if len(card.split(",")) == 4:
+            ref_code, cc_num, cc_exp_mon, cc_exp_yr = card.split(",")
+        elif len(card.split(",")) == 3:
+            cc_num, cc_exp_mon, cc_exp_yr = card.split(",")
+        else:
+            ref_code = card
     elif use_card:
         cc_num, cc_exp_mon, cc_exp_yr = card.split(" ")
 
