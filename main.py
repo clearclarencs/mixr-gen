@@ -187,7 +187,7 @@ def gen(use_card=False, card=""):
         font = ImageFont.truetype('Arial', 25)
         draw.text((320, 1270), voucherCode, font=font, fill="black")
 
-        return img1
+        return img1, email
 
     except Exception as e:
         print(traceback.format_exc())

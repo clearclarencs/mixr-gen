@@ -11,8 +11,9 @@ async def on_ready():
 @client.command(name='mixr', help='Generates free drink')
 async def go(ctx):
     with io.BytesIO() as image_binary:
-        email = gen(use_card=True, card=ctx.message.content.replace("!mixr", "").strip()).save(image_binary, 'PNG')
+        img, email = gen(use_card=True, card=ctx.message.content.replace("!mixr", "").strip())
         await ctx.send(email)
+        img.save(image_binary, 'PNG')
         image_binary.seek(0)
         await ctx.send(file=discord.File(fp=image_binary, filename='image.png'))
 
