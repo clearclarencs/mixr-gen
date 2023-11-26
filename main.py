@@ -180,14 +180,14 @@ def gen(use_card=False, card=""):
 
         img = qrcode.make(voucherCode, box_size=19, border=0)
 
-        img1 = Image.open(r"bg.png")
-        img1.paste(img, (180,750)) 
+        # img1 = Image.open(r"bg.png")
+        # img1.paste(img, (180,750)) 
 
-        draw = ImageDraw.Draw(img1)
-        font = ImageFont.truetype('Arial', 25)
-        draw.text((320, 1270), voucherCode, font=font, fill="black")
+        # draw = ImageDraw.Draw(img1)
+        # font = ImageFont.truetype('Arial', 25)
+        # draw.text((320, 1270), voucherCode, font=font, fill="black")
 
-        return img1, email
+        return img, email
 
     except Exception as e:
         print(traceback.format_exc())
