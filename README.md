@@ -12,4 +12,4 @@ Can use a cards.csv of cc_num,cc_exp_month,cc_exp_year_4_digits if you dont pass
 
 Not much security on their API, sms verification was easily bypassed by patching true to the customer details, email verification isn't required so a random (most likely fake) gmail is used and no IP detection is implemented so can be ran all localhost.
 
-_Dont abuse this, it was mainly a way for me to learn to bypass SSL pinning and was a cool project to show off at the pub. If mixr are reading this, SSL pinning your app does not mean your API is secure. People will always sniff packets, (especially after a pint)._
+_Dont abuse this, it was mainly a way for me to learn to bypass SSL pinning and was a cool project to show off at the pub. If stonegate are reading this, SSL pinning your app does not mean your API is secure. People will always sniff packets, (especially after a pint)._
